@@ -173,7 +173,7 @@ header{
     width: 20%;
 }
 
-.right a{
+.right .login{
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -185,7 +185,19 @@ header{
     padding: 0.8rem 2rem;
     border-radius: 1.5rem;
     transition: 0.2s;
+    text-decoration: none;
+    font-weight: 500;
 }
+
+
+#respNav{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;    
+    position: relative;
+    display: none;
+}
+
+
 
     /* HEADER CONTENT    */
 
@@ -250,6 +262,8 @@ header{
 
 
     /*  SECTION 1 */
+
+
 #designed{
     margin-top: 7rem;
 }
@@ -303,7 +317,6 @@ header{
 
 #state .mobileimg{
     position: relative;
-    
     width: 40%;
     height: 100%;
 }
@@ -311,6 +324,7 @@ header{
 .mobileimg img{
     position: absolute;
     bottom: -7rem;
+    width: 107%;
 }
 
 #stateContent{
@@ -394,7 +408,12 @@ h4{
 .attribution a { 
     color: var(--l-red); 
 }
+
+
+
     /* MEDIA QUERY */
+
+    /* 1050 PX */
 
 @media screen and (max-width: 1050px){
     #headerWrap nav .left{
@@ -430,7 +449,7 @@ h4{
 
     #headerContent p{
         /* background-color: blue; */
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         text-align: center;
         width: 100%;
     }
@@ -453,5 +472,385 @@ h4{
 
     #headerContent .buttons .sff{
         margin-right: 3px;
+    }
+
+    /* SECTION 1 */
+
+    #designedContent .desktopimg img {
+        top: 0;
+    }
+}
+
+
+    /* 800PX */
+
+@media screen and (max-width: 800px){
+    /* DRY AREA */
+    .heading{
+        font-size: 1.7rem;
+    }
+
+
+    /* HEADER */
+    #headerWrap nav .left{
+        display: block;
+    }
+    
+    #headerWrap nav .left .nav-items-left, .login, .signup{
+        display: none;
+    }
+
+    #respNav{
+        display: block;
+    }
+
+    #respNav i:hover{
+        cursor: pointer;
+    }
+
+
+    #respDropdownWrap{
+        position: absolute;
+        right: -5rem;
+        top: 2rem;
+        flex-direction: column;
+        width: 12rem;
+        height: auto;
+        z-index: 1;
+        background-color: white;
+        border-radius: 0.3rem;
+        color: black;
+        box-shadow: 0.1rem 0.1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    .navInvisible{
+        display: none;
+    }
+    
+    hr{
+        height: 0.2px;
+        width: 85%;
+        background-color: rgba(0, 0, 0, 0.2);
+        border: none;
+    }
+
+    .respDropdown{
+        margin: 1rem auto;
+        width: 100%;
+    }
+
+    .respNav-item{
+        /* background-color:red; */
+        width: 42%;
+        margin: 1rem auto;
+    }
+
+    .respNav-item i{
+        color: var(--l-red);
+    }
+
+    .respNav-item:hover{
+        cursor: pointer;
+
+    }
+
+    .respDropdown-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.3rem;
+        width: 80%;
+        margin: auto;
+        background-color: rgba(121, 47, 47, 0.1);
+    }
+
+
+    .respDropdown-items a{
+        color: var(--vd-gray-blue);
+        text-decoration: none;
+        margin: 6px auto;
+    }
+
+    .respDropdown-items a:hover{
+        color: black;
+    }
+
+
+    .respInvisible{
+        display: none;
+    }
+
+    .respButtons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.3rem;
+    }
+
+    .respButtons a{
+        margin: 0.5rem 0;
+        text-decoration: none;
+    }
+
+
+    .respButtons .respLogin{
+        color: black;
+    }
+
+    .respButtons .respSignup{
+        color: white;
+        padding: 0.9rem 1.5rem;
+        border-radius: 2rem;
+        background-image: linear-gradient(to right, var(--vl-red), var(--l-red));
+    }
+
+    /* SECTION 1 */
+
+    #designed{
+        height: auto;
+        /* background-color: red; */
+        margin-top: 5rem;
+    }
+
+
+    #designedContent .designedText .para1, #designedContent .designedText .para2{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #designedContent h3{
+        font-size: 1.1rem;
+    }
+
+    .para1 p, .para2 p{
+        font-size: 0.8rem;
+    }
+
+    #designedContent .desktopimg img {
+        top: -5rem;
+    }
+
+        /* SECTION 2 */
+    
+    #state{
+        justify-content: space-evenly;
+    }
+
+    .mobileimg img{
+        bottom: 0;
+        width: 110%;
+    }
+
+    #stateContent h2{
+        font-size: 1.7rem;
+    }
+
+    #stateContent p{
+        font-size: 0.8rem;
+    }
+
+
+        /* SECTION 3 */
+
+    #free{
+        margin: 0;
+        height: 30rem;
+    }
+
+    #free .laptopimg img{
+        bottom: 0rem;
+        top: 0rem;
+        left: -10rem;
+    }
+
+    #freeContent .para1, #freeContent .para2{
+        margin: 0.5rem 0;
+    }
+}
+
+    /* 700PX */
+
+@media screen and (max-width: 700px){
+    #designedContent .desktopimg img{
+        top: 0;
+    }
+
+    #free .laptopimg img{
+        top: 3rem;
+    }
+}
+
+    /* 540 PX */
+
+
+@media screen and (max-width: 540px){
+    /* DRY AREA */
+    .heading{
+        font-size: 1.5rem;
+    }
+
+    /* HEADER */
+    header{
+        background-size: 310%, contain;
+        background-position: 35% 40%;
+    }
+    
+    #headerWrap .left img{
+        width: 5rem;
+    }
+
+    #headerContent h1{
+        font-size: 1.9rem;
+        
+    }
+    
+    #headerContent .buttons{
+        width: 100%;
+    }
+
+    #respDropdownWrap{
+        width: 20rem;
+        height: auto;
+        left: -17rem;
+    }
+
+    .respDropdown{
+        width: 100%;
+    }
+
+    #respDropdownWrap .respDropdown .respNav-item{
+        width: 26%;
+        margin: 1rem auto;
+    }
+
+    /* SECTION 1 */
+
+    #designedContent{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 10rem;
+    }
+
+    #designedContent .desktopimg img{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    #designedContent .designedText{
+        width: 65%;
+        margin-left: 0;
+    }
+
+    .designedText h3{
+        font-size: 1.1rem;
+    }
+
+    .designedText .para1, #designedContent .designedText .para2{
+        text-align: center;
+    }
+
+    .designedText .paragraph{
+        width: 100%;
+        font-size: 0.7rem;
+    }
+
+        /* SECTION 2 */
+    
+    #state{
+        flex-direction: column;
+        height: 30rem;
+        background-position: 50% -400%;
+        background-size: 120%;
+        margin-top: 0;
+    }
+
+    #state .mobileimg{
+        width: 100%;
+        bottom: 7rem;
+        height: auto;
+        left: 5%;
+    }
+
+    .mobileimg img{
+        position: relative;
+        width: 20rem;
+        margin: auto;
+    }
+
+    #stateContent{
+        position: relative;
+        bottom: 6rem;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+
+    #stateContent h2{
+        font-size: 1.7rem;
+        margin-top: 0;
+    }
+
+    #stateContent p{
+        font-size: 0.9rem;
+        width: 90%;
+        margin: auto;
+    }
+
+        /* SECTION 3 */
+    
+    #free{
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    #free .laptopimg{
+        width: 100%;
+    }
+
+    #free .laptopimg img{
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+
+    #freeContent{
+        width: 100%;
+    }
+
+    #freeContent .para1, #freeContent .para2{
+        margin: auto;
+        text-align: center;
+        
+    }
+
+    #freeContent .paragraph{
+        width: 70%;
+        margin: auto;
+    }
+
+    #freeContent h3{
+        margin-bottom: 0.7rem;
+    }
+
+        /* FOOTER */
+    
+    footer{
+        align-items: center;
+        height: 43rem;
+        
+    }
+
+    #footerContent{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+
+    #footerContent .col{
+        margin: 0.7rem 0;
     }
 }
